@@ -1,0 +1,89 @@
+{
+  "name": "lineage",
+  "displayName": "Lineage",
+  "description": "在编辑器行号栏右键即可开关逐行 Git blame 注释",
+  "version": "0.1.0",
+  "engines": {
+    "vscode": "^1.74.0"
+  },
+  "categories": [
+    "SCM Providers"
+  ],
+  "keywords": [
+    "git",
+    "blame",
+    "annotate",
+    "gutter"
+  ],
+  "publisher": "local",
+  "activationEvents": [
+    "onStartupFinished"
+  ],
+  "capabilities": {
+    "untrustedWorkspaces": {
+      "supported": false
+    },
+    "virtualWorkspaces": false
+  },
+  "main": "./out/extension.js",
+  "icon": "icon.png",
+  "contributes": {
+    "commands": [
+      {
+        "command": "lineage.enableBlame",
+        "title": "Annotate with Git Blame"
+      },
+      {
+        "command": "lineage.disableBlame",
+        "title": "✓ Annotate with Git Blame"
+      }
+    ],
+    "menus": {
+      "editor/lineNumber/context": [
+        {
+          "command": "lineage.enableBlame",
+          "when": "!lineage.blameEnabled",
+          "group": "lineage@1"
+        },
+        {
+          "command": "lineage.disableBlame",
+          "when": "lineage.blameEnabled",
+          "group": "lineage@1"
+        }
+      ],
+      "commandPalette": [
+        {
+          "command": "lineage.enableBlame",
+          "when": "false"
+        },
+        {
+          "command": "lineage.disableBlame",
+          "when": "false"
+        }
+      ]
+    }
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "pretest": "npm run compile && npm run lint",
+    "lint": "eslint src",
+    "test": "mocha",
+    "package": "vsce package --allow-missing-repository --skip-license"
+  },
+  "devDependencies": {
+    "@types/vscode": "1.74.0",
+    "@types/mocha": "^10.0.10",
+    "@types/node": "16.x",
+    "@vscode/vsce": "^4.0.0",
+    "eslint": "^10.5.0",
+    "mocha": "^12.0.3",
+    "typescript": "^6.0.3",
+    "typescript-eslint": "^8.61.1"
+  },
+  "overrides": {
+    "diff": "^8.0.4",
+    "serialize-javascript": "^7.0.6"
+  }
+}

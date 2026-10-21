@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="128" height="128" viewBox="0 0 128 128">
+  <rect x="4" y="4" width="120" height="120" rx="26" fill="#17212b"/>
+  <rect x="4" y="4" width="120" height="120" rx="26" fill="none" stroke="#314352" stroke-width="3"/>
+  <g fill="#9aabba" font-family="Menlo, SFMono-Regular, monospace" font-size="13" text-anchor="end">
+    <text x="34" y="43">1</text>
+    <text x="34" y="67">2</text>
+    <text x="34" y="91">3</text>
+  </g>
+  <path d="M46 38v48" fill="none" stroke="#ffb454" stroke-width="4" stroke-linecap="round"/>
+  <g fill="#ffb454" stroke="#17212b" stroke-width="3">
+    <circle cx="46" cy="38" r="7"/>
+    <circle cx="46" cy="62" r="7"/>
+    <circle cx="46" cy="86" r="7"/>
+  </g>
+  <g fill="none" stroke-linecap="round" stroke-width="6">
+    <path d="M62 38h42" stroke="#70c1b3"/>
+    <path d="M62 62h31" stroke="#82aaff"/>
+    <path d="M62 86h47" stroke="#d6a2e8"/>
+  </g>
+</svg>
