@@ -16,6 +16,14 @@
     "gutter"
   ],
   "publisher": "local",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/zhangtianhao/lineage.git"
+  },
+  "bugs": {
+    "url": "https://github.com/zhangtianhao/lineage/issues"
+  },
+  "homepage": "https://github.com/zhangtianhao/lineage#readme",
   "activationEvents": [
     "onStartupFinished"
   ],
@@ -70,7 +78,7 @@
     "pretest": "npm run compile && npm run lint",
     "lint": "eslint src",
     "test": "mocha",
-    "package": "vsce package --allow-missing-repository --skip-license"
+    "package": "vsce package --skip-license"
   },
   "devDependencies": {
     "@types/vscode": "1.74.0",

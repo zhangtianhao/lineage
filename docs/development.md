@@ -57,7 +57,8 @@ npx vsce ls      # 确认包内容
 ```
 
 - 包中只应包含 `package.json`、`README.md`、`CHANGELOG.md`、`icon.png` 和 `out/` 下的运行时 JS；`src/`、`docs/`、测试、source map 都由 `.vscodeignore` 排除。
-- 打包参数 `--allow-missing-repository --skip-license` 是因为目前没有配置 `repository` 字段和 LICENSE 文件。如果以后添加了这两项，可以去掉对应参数。
+- `package.json` 的 `repository` 指向 GitHub 仓库，vsce 打包时会把 README 中的相对链接（例如 `docs/architecture.md`）改写为 GitHub 上的绝对地址，所以扩展详情页里的链接可以打开。删除 `repository` 字段会导致打包报错。
+- 打包参数 `--skip-license` 是因为仓库目前没有 LICENSE 文件。以后添加 LICENSE 后可以去掉这个参数。
 - 本扩展不发布到 Marketplace。安装方式：在 VSCode 扩展视图中选择"从 VSIX 安装…"，或执行 `code --install-extension lineage-<version>.vsix`。
 
 ## 6. 图标

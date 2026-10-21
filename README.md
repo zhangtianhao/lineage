@@ -36,7 +36,7 @@
 
 ## 开发
 
-以下文档只在源码仓库中提供，不包含在 vsix 中。
+以下文档位于源码仓库，不包含在 vsix 中；在扩展详情页点击会跳转到 GitHub。
 
-- 架构说明 `docs/architecture.md`：模块划分、运行流程与关键设计决策
-- 开发指南 `docs/development.md`：构建、调试、测试、打包与代码约定
+- [架构说明](docs/architecture.md)：模块划分、运行流程与关键设计决策
+- [开发指南](docs/development.md)：构建、调试、测试、打包与代码约定
